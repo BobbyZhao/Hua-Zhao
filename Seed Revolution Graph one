@@ -1,0 +1,24 @@
+#!usr/bin/python/
+#First graph to show the situation of the continents and the accessions.
+import csv
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+         
+
+continent=pd.read_csv("sgsv_by_continent_20180205.csv", sep='\t')
+
+
+x = continent['continent_name']
+y = continent['accessions']
+
+y_pos = np.arange(len(continent['continent_name']))
+
+plt.bar(y_pos, continent['accessions'], align='center', 
+                  alpha=0.8)
+plt.xticks(y_pos, continent['continent_name'])
+
+plt.show()
