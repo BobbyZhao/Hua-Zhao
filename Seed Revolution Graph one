@@ -1,5 +1,5 @@
 #!usr/bin/python/
-#First graph to show the situation of the continents and the accessions.
+
 import csv
 
 import pandas as pd
@@ -20,5 +20,5 @@ y_pos = np.arange(len(continent['continent_name']))
 plt.bar(y_pos, continent['accessions'], align='center', 
                   alpha=0.8)
 plt.xticks(y_pos, continent['continent_name'])
-
+plt.ylabel('Seeds accessions')
 plt.show()
